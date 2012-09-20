@@ -243,6 +243,11 @@
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="ko.html" />
+    <None Include="Scripts\amplify-vsdoc.js" />
+    <Content Include="LocalStorage.html" />
+    <Content Include="Scripts\amplify.js" />
+    <Content Include="Scripts\amplify.min.js" />
+    <Content Include="Scripts\GPL-LICENSE.txt" />
     <Content Include="Scripts\Index.js" />
     <None Include="Scripts\jquery-1.8.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.1.js" />
@@ -258,7 +263,9 @@
     <Content Include="Scripts\jsrender.js" />
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\MIT-LICENSE.txt" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\README.txt" />
     <Content Include="Scripts\sammy\sammy.cache.js" />
     <Content Include="Scripts\sammy\sammy.cache.min.js" />
     <Content Include="Scripts\sammy\sammy.data_location_proxy.js" />
@@ -376,7 +383,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>51883</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:52380/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

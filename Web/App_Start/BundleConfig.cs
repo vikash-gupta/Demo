@@ -21,7 +21,8 @@ namespace Web
             bundles.Add(new ScriptBundle("~/bundles/lib").Include(
                        "~/Scripts/jsrender*",
                        "~/Scripts/knockout-{version}.js",
-                       "~/Scripts/sammy/sammy.js"));
+                       "~/Scripts/sammy/sammy.js",
+                       "~/Scripts/amplify.js"));
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(

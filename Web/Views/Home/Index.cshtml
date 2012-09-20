@@ -16,12 +16,12 @@
     </table>
 </script>
     <div id="results"></div>*@
-
+<h1>Financial Overview</h1>
 <div data-bind="template: { name: 'summary-template', foreach: accountsSummary }"></div>
 
 <script type="text/html" id="summary-template">
 
-    <table border="1">
+    <table style="border:thick;width:70%">
         <thead>
             <tr>
                 <th>Account Id</th>
@@ -29,8 +29,9 @@
             </tr>
         </thead>
         <tbody>
-            <tr data-bind="click: $root.goToAccount">
-                <td data-bind="text: Id"></td>
+            <tr >
+                <td data-bind="text: Id,click: $root.goToAccount" title="click to get balance">
+                </td>
                 <td data-bind="text: NickName"></td>
             </tr>
         </tbody>

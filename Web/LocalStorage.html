@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-1.8.1.js"></script>
+    <script src="Scripts/amplify.js"></script>
+    <script src="Scripts/amplify-vsdoc.js"></script>
+</head>
+    
+<body>
+    <script type="text/javascript">
+       
+
+        $(function () {
+            var fromStore = amplify.store("counter");
+            alert(fromStore);
+            $("#save").click(function () {
+                alert("saveing...");
+                amplify.store("counter", 1);
+            });
+        });
+    </script>
+
+    <input type="button" value="here"  id="save"/>
+</body>
+</html>

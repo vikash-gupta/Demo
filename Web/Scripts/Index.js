@@ -1,4 +1,9 @@
-﻿$(function () {
+﻿/// <reference path="sammy/sammy.js" />
+/// <reference path="amplify.js" />
+/// <reference path="amplify-vsdoc.js" />
+
+var lastUrlKey = "Demo.LastView";
+$(function () {
     function AccountViewModel() {
         // Data
         var self = this;
@@ -12,16 +17,19 @@
         Sammy(function () {
             this.get('#:summary', function () {
                 self.chosenAccountDetails(null);
+                amplify.store(lastUrlKey, "#summary");
                 $.get("/api/accounts", self.accountsSummary);
             });
             this.get('#api/accounts/:accountId', function () {
                 self.accountsSummary(null);
-                $.get("/api/accounts/100" + this.params.accountId, self.chosenAccountDetails);
+                amplify.store(lastUrlKey, "#api/accounts/" + this.params.accountId);
+                $.get("/api/accounts/" + this.params.accountId, self.chosenAccountDetails);
             });
-
-
-
-            this.get('', function () { this.app.runRoute('get', '#summary') });
+            
+            var fromLocalStore = amplify.store(lastUrlKey);
+            var initialView = this.getLocation() || fromLocalStore || "#summary";
+            location.hash = initialView;
+            this.get('', function () { this.app.runRoute('get', initialView) });
 
         }).run();
     };

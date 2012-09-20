@@ -17,13 +17,13 @@ namespace MockRepository
         
         public IEnumerable<Models.Account> GetAccounts()
         {
-            return new List<Models.Account>{new Models.Account{Id=random.Next(200,300), Balance=23.35M, NickName="checking"}, 
-                new Models.Account{Id=random.Next(100,200), Balance=12.78M, NickName="saving"}};
+            return new List<Models.Account>{new Models.Account{Id=random.Next(200,300), Balance=23.35, NickName="checking"}, 
+                new Models.Account{Id=random.Next(100,200), Balance=12.78, NickName="saving"}};
         }
 
         public Models.Account GetAccount(int id)
         {
-            return new Models.Account { Id = id, Balance = 123.12M, NickName = "Random" };
+            return new Models.Account { Id = id, Balance = id*1.05, NickName = "Random" };
         }
     }
 

@@ -16,7 +16,7 @@ namespace Web
 
             //OAuthWebSecurity.RegisterMicrosoftClient(
             //    clientId: "",
-            //    clientSecret: "");
+                //clientSecret: "");
 
             //OAuthWebSecurity.RegisterTwitterClient(
             //    consumerKey: "",
@@ -26,7 +26,7 @@ namespace Web
             //    appId: "",
             //    appSecret: "");
 
-            //OAuthWebSecurity.RegisterGoogleClient();
+            OAuthWebSecurity.RegisterGoogleClient();
         }
     }
 }
