@@ -52,6 +52,10 @@
       <HintPath>..\packages\Autofac.WebApi.2.6.2.859\lib\NET40\Autofac.Integration.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.9\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -62,6 +66,18 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.Data">
+      <HintPath>..\packages\AspNetWebApi.Data.4.0.20221.15125\lib\net40\System.Web.Http.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Data.EntityFramework">
+      <HintPath>..\packages\AspNetWebApi.Data.4.0.20221.15125\lib\net40\System.Web.Http.Data.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Data.Helpers">
+      <HintPath>..\packages\AspNetWebApi.Data.4.0.20221.15125\lib\net40\System.Web.Http.Data.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Data.Helpers2">
+      <HintPath>..\packages\AspNetWebApi.Data.4.0.20221.15125\lib\net40\System.Web.Http.Data.Helpers2.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -78,9 +94,6 @@
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
     </Reference>
@@ -185,6 +198,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Spa.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -241,6 +255,15 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="CodeTemplates\AddView\CSHTML\SpaLayout.tt" />
+    <Content Include="CodeTemplates\AddView\CSHTML\SpaIndex.tt" />
+    <Content Include="CodeTemplates\AddView\CSHTML\Spa_Paging.tt" />
+    <Content Include="CodeTemplates\AddView\CSHTML\Spa_Grid.tt" />
+    <Content Include="CodeTemplates\AddView\CSHTML\Spa_Editor.tt" />
+    <Content Include="CodeTemplates\AddController\SpaJsViewModel.tt" />
+    <Content Include="CodeTemplates\AddController\SpaDataController.tt" />
+    <Content Include="CodeTemplates\AddController\SpaDataController.Entity.tt" />
+    <Content Include="CodeTemplates\AddController\SpaController.tt" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="ko.html" />
     <None Include="Scripts\amplify-vsdoc.js" />
@@ -265,6 +288,9 @@
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\MIT-LICENSE.txt" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\native.history.js" />
+    <Content Include="Scripts\nav.js" />
+    <Content Include="Scripts\nav.min.js" />
     <Content Include="Scripts\README.txt" />
     <Content Include="Scripts\sammy\sammy.cache.js" />
     <Content Include="Scripts\sammy\sammy.cache.min.js" />
@@ -309,6 +335,12 @@
     <Content Include="Scripts\sammy\sammy.title.min.js" />
     <Content Include="Scripts\sammy\sammy.tmpl.js" />
     <Content Include="Scripts\sammy\sammy.tmpl.min.js" />
+    <Content Include="Scripts\Transfer.js" />
+    <Content Include="Scripts\upshot.compat.knockout.js" />
+    <Content Include="Scripts\upshot.js" />
+    <Content Include="Scripts\upshot.knockout.extensions.js" />
+    <Content Include="Scripts\upshot.min.js" />
+    <Content Include="Transfer.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -366,6 +398,9 @@
       <Project>{f9b7be0a-0ee1-48b7-806f-a252cd794eaa}</Project>
       <Name>MockRepository</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

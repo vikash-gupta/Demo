@@ -9,6 +9,7 @@ using References;
 
 namespace Web.Controllers
 {
+    
     public class AccountsController : ApiController
     {
         public IAccountsRepository AccountsRepository { get; set; }
@@ -23,6 +24,7 @@ namespace Web.Controllers
         }
 
         // GET api/accounts/5
+        [Authorize]
         public Account Get(int id)
         {
             return AccountsRepository.GetAccount(id);

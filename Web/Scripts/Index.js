@@ -11,7 +11,7 @@ $(function () {
         self.accountsSummary = ko.observable();
 
         // Behaviours    
-        self.goToAccount = function (account) { location.hash = "api/accounts/"+account.Id };
+        self.goToAccount = function (account) { location.hash = "api/accounts/" + account.Id };
 
         // Client-side routes    
         Sammy(function () {
@@ -23,9 +23,15 @@ $(function () {
             this.get('#api/accounts/:accountId', function () {
                 self.accountsSummary(null);
                 amplify.store(lastUrlKey, "#api/accounts/" + this.params.accountId);
-                $.get("/api/accounts/" + this.params.accountId, self.chosenAccountDetails);
+                
+                $.ajax({
+                    type: "GET",
+                    url: "/api/accounts/" + this.params.accountId,
+                    success: self.chosenAccountDetails
+                });
             });
-            
+
+
             var fromLocalStore = amplify.store(lastUrlKey);
             var initialView = this.getLocation() || fromLocalStore || "#summary";
             location.hash = initialView;
@@ -34,15 +40,13 @@ $(function () {
         }).run();
     };
     ko.applyBindings(new AccountViewModel());
+
+    $.ajaxSetup({
+        error: function (a, b, c) {
+            $("#error").html(a.responseText);
+        },
+        success: function (a, b, c) {
+            $("#error").html();
+        }
+    });
 });
-
-
-//$(function () {
-//    var resultsFromWebApi = $.get('api/accounts', function (data) {
-//        function MyViewModel() {
-//            this.accounts = data;
-//        }
-//        ko.applyBindings(new MyViewModel());
-//    });
-//    //ko.applyBindings(new AccountViewModel());
-//});

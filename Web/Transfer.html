@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<!--<body>
+    <form id="TransferForm" method="post" action="api/transfer">
+        <select id="FromAccount">
+            <option>Checking</option>
+            <option>Saving</option>
+        </select>
+        <select id="ToAccount">
+            <option>Saving</option>
+            <option>Checking</option>
+        </select>
+        <label>Amount:</label>
+        <label>Description:</label>
+        <input type="text" id="Description" />
+        <input id="Amount" type="text" />
+        <input id="Submit" type="submit" value="submit" />
+    </form>
+</body>-->
+<script src="Scripts/jquery-1.8.1.js"></script>
+<script src="Scripts/Transfer.js"></script>
+<body>
+    <div id="message"></div>
+    <form id="form1" > 
+    <div> 
+        <label for="FromAccountId">From Account</label> 
+    </div> 
+    <div> 
+        <select id="FromAccountId" name="FromAccountId">
+            <option value="1">Checking</option>
+            <option value="2">Saving</option>
+        </select>
+        
+    </div> 
+    <div> 
+        <label for="ToAccountId">ToAccount</label> 
+    </div> 
+    <div> 
+        <select id="ToAccountId" name="ToAccountId">
+            <option value="1">Checking</option>
+            <option value="2">Saving</option>
+        </select>
+    </div> 
+    <div>
+        <label for="Amount">Amount</label>
+
+    </div>   
+    <div>
+        <input type="text" name="Amount" />
+    </div>
+    <div> 
+        <input type="submit" value="Submit" /> 
+    </div> 
+</form>
+    </body>
+</html>
