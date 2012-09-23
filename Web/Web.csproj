@@ -265,9 +265,9 @@
     <Content Include="CodeTemplates\AddController\SpaDataController.Entity.tt" />
     <Content Include="CodeTemplates\AddController\SpaController.tt" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="ko.html" />
+    <Content Include="KoDemo.html" />
     <None Include="Scripts\amplify-vsdoc.js" />
-    <Content Include="LocalStorage.html" />
+    <Content Include="LocalStorageDemo.html" />
     <Content Include="Scripts\amplify.js" />
     <Content Include="Scripts\amplify.min.js" />
     <Content Include="Scripts\GPL-LICENSE.txt" />

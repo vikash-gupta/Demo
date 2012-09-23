@@ -44,6 +44,7 @@ $(function () {
     $.ajaxSetup({
         error: function (a, b, c) {
             $("#error").html(a.responseText);
+            $('table').hide();
         },
         success: function (a, b, c) {
             $("#error").html();

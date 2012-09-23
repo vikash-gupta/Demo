@@ -16,34 +16,30 @@
     </table>
 </script>
     <div id="results"></div>*@
-<h1>Financial Overview</h1>
+    <h1>Financial Overview</h1>
     <label id="error"></label>
-<div data-bind="template: { name: 'summary-template', foreach: accountsSummary }"></div>
+    <script type="text/html" id="summary-template">
+        <tr>
+            <td data-bind="text: Id,click: $root.goToAccount" title="click to get balance"></td>
+            <td data-bind="text: NickName"></td>
+        </tr>
+    </script>
 
-<script type="text/html" id="summary-template">
-
-    <table style="border:thick;width:70%">
+    <table style="border: thick; width: 70%">
         <thead>
             <tr>
                 <th>Account Id</th>
                 <th>Name</th>
             </tr>
         </thead>
-        <tbody>
-            <tr >
-                <td data-bind="text: Id,click: $root.goToAccount" title="click to get balance">
-                </td>
-                <td data-bind="text: NickName"></td>
-            </tr>
+        <tbody data-bind="template: { name: 'summary-template', foreach: accountsSummary }">
         </tbody>
     </table>
 
-</script>
-
     <!-- Account Details -->
-<div data-bind="with: chosenAccountDetails">
-    <label>Account Balance:</label>
-    <h4 data-bind="text: Balance"></h4>
-</div>
+    <div data-bind="with: chosenAccountDetails">
+        <label>Account Balance:</label>
+        <h4 data-bind="text: Balance"></h4>
+    </div>
 </body>
 </html>
