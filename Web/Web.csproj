@@ -198,6 +198,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Branches.html" />
     <Content Include="Content\Spa.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -270,6 +271,7 @@
     <Content Include="LocalStorageDemo.html" />
     <Content Include="Scripts\amplify.js" />
     <Content Include="Scripts\amplify.min.js" />
+    <Content Include="Scripts\Branches.js" />
     <Content Include="Scripts\GPL-LICENSE.txt" />
     <Content Include="Scripts\Index.js" />
     <None Include="Scripts\jquery-1.8.1.intellisense.js" />
